@@ -22,7 +22,7 @@ body {
     background-color: #040706;
     padding: 15px;
     border-radius: 32px;
-    box-shadow: 15px 10px 0px 5px #00000033;
+    box-shadow: 15px 10px 0px 5px #0000004f;
 }
 
 button {
@@ -33,7 +33,6 @@ button {
     font-size: 1.5em;
     border: none;
     background-color: #16318a;
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #bbbbbb23;
 }
 
 .operador{
@@ -41,14 +40,14 @@ button {
 }
 
 button:active {
-    background-color: #bec0c5;
+    background-color: #000000;
 }
 
 button:focus {
     outline: none;
 }
 
-.col-2 {
+.colm2 {
     grid-column: span 2;
 }
 
