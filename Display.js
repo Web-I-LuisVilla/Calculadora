@@ -16,7 +16,7 @@ class Display {
 
   borrar() {
     if ((this.valorActual = this.valorActual.toString().slice(0, -1))) {
-      this.imprimirValores();
+      this.mostrarValores();
     }
     return;
   }
@@ -25,7 +25,7 @@ class Display {
     this.valorActual = "";
     this.valorAnterior = "";
     this.tipoOperacion = undefined;
-    this.imprimirValores();
+    this.mostrarValores();
   }
 
   computar(tipo) {
@@ -33,16 +33,16 @@ class Display {
     this.tipoOperacion = tipo;
     this.valorAnterior = this.valorActual || this.valorAnterior;
     this.valorActual = "";
-    this.imprimirValores();
+    this.mostrarValores();
   }
 
   agregarNumero(numero) {
     if (numero === "." && this.valorActual.includes(".")) return;
     this.valorActual = this.valorActual.toString() + numero.toString();
-    this.imprimirValores();
+    this.mostrarValores();
   }
 
-  imprimirValores() {
+  mostrarValores() {
     this.displayValorActual.textContent = this.valorActual;
     this.displayValorAnterior.textContent = `${this.valorAnterior} ${
       this.signos[this.tipoOperacion] || ""
